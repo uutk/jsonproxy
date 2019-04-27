@@ -38,7 +38,7 @@ def push_to_git():
     india = timezone('Asia/Kolkata')
     in_time = datetime.now(india)
 	
-    commit_message= ("Updated at " + str(in_time.strftime('%D | %H-%M-%S'))+" IST")
+    commit_message= ("Updated at " + str(in_time.strftime('%d | %H-%M-%S'))+" IST")
     #Stage the file
     call('git add .', shell = True)
     # Add your commit
