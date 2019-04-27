@@ -24,7 +24,7 @@ def set_proxy():
     np_list=[]
     for i in p_list:
         np_list.append(i)
-    #print(len(np_list))
+    #print(len(np_list));
     proxy=[]
     for i in np_list:
         proxy.append((str(i['host'])+':'+str(i['port'])))
