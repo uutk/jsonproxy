@@ -38,8 +38,8 @@ def push_to_git(list_p):
     india = timezone('Asia/Kolkata')
     in_time = datetime.now(india)
 	
-    #commit_message= ("Updated at " + str(in_time.strftime('%d-%m-%Y | %H-%M-%S'))+" IST") #orig mesage
-    commit_message= ("Updated at " + str(in_time.strftime('%d-%m-%Y | %H-%M-%S'))+" IST | This List Contains "+ str(len(list_p['data'])) + " Proxies")
+    commit_message= ("Updated at " + str(in_time.strftime('%d-%m-%Y | %H-%M-%S'))+" IST") #orig mesage
+    #commit_message= ("Updated at " + str(in_time.strftime('%d-%m-%Y | %H-%M-%S'))+" IST | This List Contains "+ str(len(list_p['data'])) + " Proxies")
     #Stage the file
     call('git add .', shell = True)
     # Add your commit
