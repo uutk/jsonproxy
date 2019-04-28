@@ -31,15 +31,15 @@ def set_proxy():
     print(len(proxy))
     return(proxy)
 
-def push_to_git():
+def push_to_git(list_p):
     #Import dependencies
     from subprocess import call
     #Commit Message
     india = timezone('Asia/Kolkata')
     in_time = datetime.now(india)
 	
-    commit_message= ("Updated at " + str(in_time.strftime('%d-%m-%Y | %H-%M-%S'))+" IST") #orig mesage
-    #commit_message= ("Updated at " + str(in_time.strftime('%d-%m-%Y | %H-%M-%S'))+" IST | This List Contains "+ str(len(list_p['data'])) + " Proxies")
+    #commit_message= ("Updated at " + str(in_time.strftime('%d-%m-%Y | %H-%M-%S'))+" IST") #orig mesage
+    commit_message= ("Updated at " + str(in_time.strftime('%d-%m-%Y | %H-%M-%S'))+" IST | This List Contains "+ str(len(list_p['data'])) + " Proxies")
     #Stage the file
     call('git add .', shell = True)
     # Add your commit
@@ -153,7 +153,7 @@ def start():
     proxy_json={'data':get_proxy()}
     with open('proxy.json', 'w') as outfile:
         json.dump(proxy_json, outfile)
-    push_to_git()
+    push_to_git(proxy_json)
 
 
 start()
