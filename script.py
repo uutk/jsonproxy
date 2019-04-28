@@ -31,7 +31,7 @@ def set_proxy():
     print(len(proxy))
     return(proxy)
 
-def push_to_git(list_p):
+def push_to_git():
     #Import dependencies
     from subprocess import call
     #Commit Message
@@ -153,7 +153,7 @@ def start():
     proxy_json={'data':get_proxy()}
     with open('proxy.json', 'w') as outfile:
         json.dump(proxy_json, outfile)
-    push_to_git(proxy_json)
+    push_to_git()
 
 
 start()
