@@ -38,14 +38,15 @@ def push_to_git(list_p):
     india = timezone('Asia/Kolkata')
     in_time = datetime.now(india)
 	
-    #commit_message= ("Updated at " + str(in_time.strftime('%d-%m-%Y | %H-%M-%S'))+" IST") #orig mesage
     commit_message= ("Updated at " + str(in_time.strftime('%d-%m-%Y | %H-%M-%S'))+" IST | This List Contains "+ str(len(list_p['data'])) + " Proxies")
+    print(commit_message)
     #Stage the file
-    call('git add .', shell = True)
+    #call('git add .', shell = True)
     # Add your commit
-    call('git commit -m "'+ commit_message +'"', shell = True)
+    #call('git commit -m "'+ commit_message +'"', shell = True)
     #Push the new or update files
-    call('git push origin master', shell = True)
+    #call('git push origin master', shell = True)
+    
 
 def get_proxy():
     proxies=[]

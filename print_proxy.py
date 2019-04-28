@@ -1,4 +1,11 @@
 import requests,json
+
 r=requests.get('https://raw.githubusercontent.com/rachitkataria13/jsonproxy/master/proxy.json')
 r_json=r.json()
-print(len(r_json['data']))
+
+r_len = len(r_json['data'])
+
+for i in range(r_len):
+        print(r_json['data'][i])
+
+print("There Are",r_len,"Proxies Available")
